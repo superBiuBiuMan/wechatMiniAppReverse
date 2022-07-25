@@ -1,0 +1,55 @@
+<view class="container data-v-96d9b598" style="{{'height:'+windowHeight+'px'+';'}}">
+    <image class="page-bg data-v-96d9b598" mode="widthFix" src="/static/image/ui/editor_bg.svg" style="{{'height:'+windowHeight+'px'+';'}}"></image>
+    <view class="data-v-96d9b598" wx:if="{{SHOW_TIP}}">
+        <add-tips bind:__l="__l" class="data-v-96d9b598" statusBarHeight="{{statusBarHeight}}" vueId="663426c0-1"></add-tips>
+    </view>
+    <view class="avatar-container data-v-96d9b598" id="avatar-container">
+        <image class="avatar-img data-v-96d9b598" id="avatar-img" src="{{avatarImage}}"></image>
+        <image class="avatar-frame data-v-96d9b598" src="{{frameImage}}" wx:if="{{currentFrame}}"></image>
+        <view class="empty-avatar-view data-v-96d9b598" wx:if="{{!avatarImage}}">
+            <image class="empty-avatar data-v-96d9b598" src="/static/image/ui/avatar_empty.svg"></image>
+            <button bindgetuserinfo="__e" class="btn-get-avatar cu-btn round action-btn data-v-96d9b598" data-event-opts="{{[ [ 'getuserinfo',[ [ 'getUserInfoCallBack',['$event'] ] ] ] ]}}" openType="getUserInfo">获取头像</button>
+        </view>
+    </view>
+    <view class="data-v-96d9b598">
+        <canvas canvasId="canvas" class="canvas data-v-96d9b598"></canvas>
+    </view>
+    <view class="panel assets-container data-v-96d9b598">
+        <view class="category-list data-v-96d9b598" style="display:flex;">
+            <view class="data-v-96d9b598" wx:for="{{categoryList}}" wx:key="index">
+                <text bindtap="__e" class="{{['category data-v-96d9b598',item.id===currentCategory?'active':'']}}" data-categroy-id="{{item.id}}" data-event-opts="{{[ [ 'tap',[ [ 'changeCategory',['$event'] ] ] ] ]}}">{{item.name}}</text>
+            </view>
+        </view>
+        <scroll-view class="assets-scroll-view data-v-96d9b598" scrollX="true">
+            <view class="{{['assets data-v-96d9b598',item.type]}}" wx:for="{{imageList}}" wx:key="index">
+                <image bindtap="__e" class="data-v-96d9b598" data-event-opts="{{[ [ 'tap',[ [ 'changeAsset',['$event','$0'],[ [ ['imageList','',index] ] ] ] ] ] ]}}" src="{{'/static/image/'+item.src}}"></image>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="flex justify-around data-v-96d9b598">
+        <button bindtap="__e" class="cu-btn round action-btn small data-v-96d9b598" data-event-opts="{{[ [ 'tap',[ [ 'reset',['$event'] ] ] ] ]}}" id="btn-reset-img" wx:if="{{avatarImage}}">
+            <image class="data-v-96d9b598" src="/static/image/ui/icon_reset.svg"></image>
+        </button>
+        <button bindtap="__e" class="cu-btn round action-btn data-v-96d9b598" data-event-opts="{{[ [ 'tap',[ [ 'chooseImage',['$event'] ] ] ] ]}}" id="btn-choose-img">更换图片</button>
+        <button bindtap="__e" class="cu-btn round action-btn btn-primary data-v-96d9b598" data-event-opts="{{[ [ 'tap',[ [ 'draw',['$event'] ] ] ] ]}}" id="btn-save">保存头像</button>
+    </view>
+    <view class="ad-container data-v-96d9b598">
+        <ad binderror="__e" bindload="__e" class="data-v-96d9b598" data-event-opts="{{[ [ 'load',[ [ 'bannerAdLoad',['$event'] ] ] ],[ 'error',[ [ 'bannerAdError',['$event'] ] ] ] ]}}" unitId="adunit-43f7c4189a8e7c35"></ad>
+    </view>
+    <view class="{{['cu-modal data-v-96d9b598',modalName=='saveTip'?'show':'']}}">
+        <view class="cu-dialog data-v-96d9b598">
+            <view class="cu-bar bg-white justify-end data-v-96d9b598">
+                <view class="content data-v-96d9b598">已保存至相册</view>
+                <view bindtap="__e" class="action data-v-96d9b598" data-event-opts="{{[ [ 'tap',[ [ 'hideModal',['$event'] ] ] ] ]}}">
+                    <text class="cuIcon-close text-red data-v-96d9b598"></text>
+                </view>
+            </view>
+            <view class="padding data-v-96d9b598">打码机打码机</view>
+            <view class="cu-bar bg-white justify-end data-v-96d9b598">
+                <view class="action data-v-96d9b598">
+                    <button bindtap="__e" class="cu-btn line-green text-green data-v-96d9b598" data-event-opts="{{[ [ 'tap',[ [ 'hideModal',['$event'] ] ] ] ]}}">我知道了</button>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

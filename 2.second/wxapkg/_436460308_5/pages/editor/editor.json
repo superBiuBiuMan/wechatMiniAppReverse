@@ -1,0 +1,7 @@
+{
+    "disableScroll": true,
+    "navigationStyle": "custom",
+    "usingComponents": {
+        "add-tips": "/components/add-tips"
+    }
+}

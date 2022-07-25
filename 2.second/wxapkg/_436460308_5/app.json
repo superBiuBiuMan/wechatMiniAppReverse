@@ -1,0 +1,20 @@
+{
+    "pages": [
+        "pages/editor/editor",
+        "pages/save/save-done",
+        "pages/crop/crop"
+    ],
+    "window": {
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "国庆头像",
+        "navigationBarBackgroundColor": "#FFF",
+        "backgroundColor": "#FFF"
+    }
+}dColor": "#FFF"
+    },
+    "requiredBackgroundModes": [
+        "audio"
+    ],
+    "usingComponents": {},
+    "sitemapLocation": "sitemap.json"
+}

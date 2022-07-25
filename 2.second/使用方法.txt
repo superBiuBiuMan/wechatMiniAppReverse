@@ -1,0 +1,6 @@
+切换到./nodejs目录下,使用cmd命令打开
+输入下面命令
+
+node .\wuWxapkg.js C:\AMD\operation\2\wxapkg\666.wxapkg&exit
+
+第二个参数为操作的项目

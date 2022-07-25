@@ -1,0 +1,15 @@
+<view class="container data-v-19ecd09c" style="{{'height:'+windowHeight+'px'+';'}}">
+    <view bindtouchend="__e" bindtouchmove="__e" bindtouchstart="__e" class="avatar-container data-v-19ecd09c" data-event-opts="{{[ [ 'touchstart',[ [ 'touchStart',['$event'] ] ] ],[ 'touchend',[ [ 'touchEnd',['$event'] ] ] ],[ 'touchmove',[ [ 'touchMove',['$event'] ] ] ] ]}}" id="avatar-container">
+        <image bindtouchstart="__e" class="avatar-img data-v-19ecd09c" data-event-opts="{{[ [ 'touchstart',[ [ 'touchAvatarBg',['$event'] ] ] ] ]}}" id="avatar-img" src="{{avatarImage}}"></image>
+    </view>
+    <view class="flex-sub text-center save-done-view data-v-19ecd09c">
+        <text class="data-v-19ecd09c">头像已保存至相册</text>
+    </view>
+    <view class="flex btn-group data-v-19ecd09c">
+        <button bindtap="__e" class="cu-btn round action-btn btn-primary data-v-19ecd09c" data-event-opts="{{[ [ 'tap',[ [ 'share',['$event'] ] ] ] ]}}" id="btn-save" openType="share">分享给朋友</button>
+        <button bindtap="__e" class="cu-btn round action-btn data-v-19ecd09c" data-event-opts="{{[ [ 'tap',[ [ 'makeAgain',['$event'] ] ] ] ]}}" id="btn-choose-img">再来一张</button>
+    </view>
+    <view class="ad-container data-v-19ecd09c">
+        <ad-custom adIntervals="30" bind:__l="__l" bind:error="__e" bind:load="__e" class="data-v-19ecd09c" data-event-opts="{{[ [ '^load',[ ['adLoad'] ] ],[ '^error',[ ['adError'] ] ] ]}}" unitId="adunit-132e9f3b34769bda" vueId="88dc10a6-1"></ad-custom>
+    </view>
+</view>

@@ -1,0 +1,29 @@
+<view class="container">
+    <view class="page-body uni-content-info" style="{{'height:'+windowHeight+'px'+';'}}">
+        <view class="grid justify-center padding">
+            <text class="text-white">请拖动红框选择所要截取的区域</text>
+        </view>
+        <view class="cropper-content">
+            <view class="uni-corpper" style="{{'width:'+cropperInitW+'px;height:'+cropperInitH+'px;background:#000'}}" wx:if="{{isShowImg}}">
+                <view class="uni-corpper-content" style="{{'width:'+cropperW+'px;height:'+cropperH+'px;'}}">
+                    <image src="{{imageSrc}}" style="{{'width:'+cropperW+'px;height:'+cropperH+'px'}}"></image>
+                    <view catchtouchend="__e" catchtouchmove="__e" catchtouchstart="__e" class="uni-corpper-crop-box" data-event-opts="{{[ [ 'touchstart',[ [ 'contentStartMove',['$event'] ] ] ],[ 'touchmove',[ [ 'contentMoveing',['$event'] ] ] ],[ 'touchend',[ [ 'contentTouchEnd',['$event'] ] ] ] ]}}" style="{{'left:'+cutL+'px;top:'+cutT+'px; width:'+cropBoxW+'px; height: '+cropBoxW+'px'}}">
+                        <view class="uni-cropper-view-box">
+                            <view class="uni-cropper-dashed-h"></view>
+                            <view class="uni-cropper-dashed-v"></view>
+                            <view class="uni-cropper-point point-tr" data-drag="topTight"></view>
+                            <view class="uni-cropper-point point-lt" data-drag="leftTop"></view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="grid justify-between cropper-config">
+            <button bindtap="__e" class="action-btn lg" data-event-opts="{{[ [ 'tap',[ [ 'cancel',['$event'] ] ] ] ]}}" style="margin-top:30rpx;">取消</button>
+            <button bindtap="__e" class="action-btn lg" data-event-opts="{{[ [ 'tap',[ [ 'chooseImage',['$event'] ] ] ] ]}}" style="margin-top:30rpx;">选择图片</button>
+            <button bindtap="__e" class="action-btn lg" data-event-opts="{{[ [ 'tap',[ [ 'cropImage',['$event'] ] ] ] ]}}" style="margin-top:30rpx;">确定</button>
+        </view>
+        <canvas canvasId="myCanvas" style="{{'position:absolute;border: 1px solid red; width:'+imageW+'px;height:'+imageH+'px;top:-9999px;left:-9999px;'}}"></canvas>
+    </view>
+    <page-foot bind:__l="__l" name="{{name}}" vueId="7820da80-1"></page-foot>
+</view>

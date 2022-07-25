@@ -1,0 +1,22 @@
+pc_wxapkg_decrypt.exe -wxid 微信小程序id -in 要解密的wxapkg路径 -out 解密后的路径
+
+pc_wxapkg_decrypt.exe -wxid 微信小程序id -in 要解密的wxapkg路径 -out 解密后的路径
+
+
+D:\qq\wechatfile\WeChat Files\Applet\wxa30b47e94c4c8f08\25\
+例子 输出到当前文件夹 比如下面
+pc_wxapkg_decrypt.exe -wxid wxa30b47e94c4c8f08
+out 解密后的路径
+pc_wxapkg_decrypt.exe -h
+
+Usage of pc_wxapkg_decrypt.exe:
+   -in string
+         需要解密的wxapkg的文件路径 (default "__APP__.wxapkg")
+   -iv string
+         AES加密的IV,默认不需要设置，如果版本有变化，设置 (default "the iv: 16 bytes")
+   -out string
+         解密后的wxapkg的文件路径 (default "dec.wxapkg")
+   -salt string
+         pbkdf2用到的salt,默认不需要设置 (default "saltiest")
+   -wxid string
+         小程序的id
