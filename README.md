@@ -21,7 +21,7 @@ pc_wxapkg_decrypt.exe -wxid wxa50577e42c3c2a48 -in D:\360Downloads\pc_wxapkg_dec
 * 工具的使用
 
 ```
-切换到./nodejs目录下,使用cmd命令打开
+切换到./nodejs目录下,解压`node_modules.zip`后，使用cmd命令打开
 输入下面命令
 
 node .\wuWxapkg.js C:\AMD\operation\2\wxapkg\666.wxapkg&exit
